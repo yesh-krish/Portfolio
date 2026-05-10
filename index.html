@@ -39,7 +39,10 @@
         <div class="hero-inner section-shell">
         <div class="hero-copy reveal">
           <p class="eyebrow">MS Computer Science @ Texas A&amp;M</p>
-          <h1>Yeshas Krishna</h1>
+          <h1 class="split-name" aria-label="Yeshas Krishna">
+            <span><strong>Y</strong>eshas</span>
+            <span><strong>K</strong>rishna</span>
+          </h1>
           <p class="hero-lede">
             Software engineer building real-time collaboration, adaptive AI learning systems,
             and dependable full-stack products with a teaching-first mindset.
@@ -80,6 +83,21 @@
           </div>
         </div>
         </div>
+      </section>
+
+      <section class="mood section-shell reveal" aria-labelledby="mood-title">
+        <div>
+          <p class="eyebrow">Interactive</p>
+          <h2 id="mood-title">How are you building today?</h2>
+        </div>
+        <div class="mood-controls" role="group" aria-label="Change page mood">
+          <button class="mood-button is-active" type="button" data-mood="focus">Focus</button>
+          <button class="mood-button" type="button" data-mood="learn">Learn</button>
+          <button class="mood-button" type="button" data-mood="ship">Ship</button>
+        </div>
+        <p class="mood-copy" id="mood-copy">
+          Clean systems, readable code, and product decisions that keep the whole experience calm.
+        </p>
       </section>
 
       <section class="ticker" aria-label="Core strengths">
@@ -156,6 +174,9 @@
         </div>
         <div class="project-grid">
           <article class="project-card reveal">
+            <div class="project-marquee" aria-hidden="true">
+              <span>Collabo</span><span>Collabo</span><span>Collabo</span><span>Collabo</span>
+            </div>
             <div class="project-topline">
               <span class="project-index">01</span>
               <span>Sep - Oct 2025</span>
@@ -170,6 +191,9 @@
             </div>
           </article>
           <article class="project-card reveal">
+            <div class="project-marquee" aria-hidden="true">
+              <span>QuizLo.ai</span><span>QuizLo.ai</span><span>QuizLo.ai</span><span>QuizLo.ai</span>
+            </div>
             <div class="project-topline">
               <span class="project-index">02</span>
               <span>Aug - Sep 2025</span>

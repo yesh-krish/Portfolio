@@ -75,6 +75,22 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+const moodCopy = {
+  focus: "Clean systems, readable code, and product decisions that keep the whole experience calm.",
+  learn: "Teaching, review sessions, adaptive quizzes, and tools that make hard ideas easier to practice.",
+  ship: "Full-stack implementation, deployment, monitoring, and iteration until the product is useful in the real world.",
+};
+
+document.querySelectorAll(".mood-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const mood = button.dataset.mood;
+    document.body.dataset.mood = mood;
+    document.querySelectorAll(".mood-button").forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
+    document.querySelector("#mood-copy").textContent = moodCopy[mood];
+  });
+});
+
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 drawNetwork();
